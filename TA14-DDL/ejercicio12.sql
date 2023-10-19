@@ -23,7 +23,7 @@ create table Cursos(
 	numero_horas int NOT NULL,
 	dni_profesor varchar(9),
 	primary key (codigo_curso),
-    foreign key (dni_profesor) references Profesores (dni) on delete cascade on update cascade,
+	foreign key (dni_profesor) references Profesores (dni) on delete cascade on update cascade,
 	CONSTRAINT Check_Fechas CHECK (fecha_inicio < fecha_fin)
 );
 create table Alumnos(
@@ -36,6 +36,6 @@ create table Alumnos(
     fecha_nacimiento date,
 	codigo_curso int auto_increment,
 	primary key (dni),
-    foreign key (codigo_curso) references Cursos (codigo_curso) on delete cascade on update cascade,
-    CONSTRAINT Check_Sexo CHECK (sexo in ('M','H'))
+	foreign key (codigo_curso) references Cursos (codigo_curso) on delete cascade on update cascade,
+	CONSTRAINT Check_Sexo CHECK (sexo in ('M','H'))
 );
