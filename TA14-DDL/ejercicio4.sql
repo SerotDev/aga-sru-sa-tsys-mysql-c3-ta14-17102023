@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS ejercicio5;
+DROP DATABASE IF EXISTS ejercicio4;
 
-CREATE DATABASE ejercicio5;
+CREATE DATABASE ejercicio4;
 
-USE ejercicio5;
+USE ejercicio4;
 
 
 create table Departamentos(
